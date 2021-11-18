@@ -1,42 +1,7 @@
-Install package modules
+
+This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+
+Run the following code:
 
 ```shell
-npm install
-```
-
-On separate terminals:
-
-1. Start hardhat local node
-```shell
-npx hardhat node
-```
-
-2. Deploy smart contracts. Copy txnHandler's deployed address to **constants.js** and **relayer.js**' **CONTRACT_ADDRESS** variable.
-```shell
-npx hardhat run --network localhost scripts/deploy.js 
-```
-
-3. Start node.js relayer
-```shell
-node relayer.js 
-```
-
-4. Start React-App
-```shell
-npm start 
-```
-
-On clicking button on the UI, a sign message will be initiated and we can now interact with the smart contract.
-
-
-
-Things done in this project:
-1. Set up hardhat project
-2. Set up ERC20 smart contract and interface
-3. React front-end to send data to node.js backend
-4. Set up simple POST api for front-end to send data to
-5. The front-end successfully signs the msg and sends the message to the relayer, which proceeds to send the transaction. (Not sure if I got the idea of relaying correct)
-
-Notes:
-1. Contract addresses should be in an .env file for production
-2. Changed location of compiled contracts to '/src'
+npx hardhat accounts
